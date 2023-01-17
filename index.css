@@ -193,7 +193,7 @@ img {
   font-family: var(--font-family-oswald);
   font-size: var(--font-size-small);
   transition: all 0.3s ease-in-out;
-  animation-name: slideInFromBottom;
+  animation-name: opacityAnimation;
   animation-fill-mode: forwards;
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
@@ -371,13 +371,11 @@ img {
     transform: translateX(0);
   }
 }
-@keyframes slideInFromBottom {
+@keyframes opacityAnimation {
   from {
-    visibility: hidden;
-    transform: translateY(30rem);
+    opacity: 0;
   }
   to {
-    visibility: visible;
-    transform: translateX(0);
+    opacity: 1;
   }
 }
