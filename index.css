@@ -85,6 +85,12 @@ img {
   gap: 2rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  transition: all 0.3s ease-in-out;
+  /* Animation */
+  animation-name: slideInFromLeft;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 .header__navigation-hamburger {
   position: relative;
@@ -335,4 +341,13 @@ img {
   text-decoration: none;
   color: #9fa2ab;
   font-size: 1.2rem;
+}
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-30rem);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
