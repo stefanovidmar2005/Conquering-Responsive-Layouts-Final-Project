@@ -160,6 +160,10 @@ img {
   color: var(--clr-white);
   text-align: center;
   margin-bottom: 2rem;
+  animation-name: slideInFromRight;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 .hero__section-header span {
   color: var(--clr-brown);
@@ -173,6 +177,10 @@ img {
   margin-bottom: 2.5rem;
   font-size: var(--font-size-xsmall);
   line-height: 1.5;
+  animation-name: slideInFromLeft;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 .hero__section-content button {
   cursor: pointer;
@@ -185,6 +193,10 @@ img {
   font-family: var(--font-family-oswald);
   font-size: var(--font-size-small);
   transition: all 0.3s ease-in-out;
+  animation-name: slideInFromBottom;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
 }
 .hero__section-content button:hover {
   transform: scale(1.05);
@@ -348,6 +360,24 @@ img {
   }
 
   to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(30rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromBottom {
+  from {
+    visibility: hidden;
+    transform: translateY(30rem);
+  }
+  to {
+    visibility: visible;
     transform: translateX(0);
   }
 }
